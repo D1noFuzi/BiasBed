@@ -1,0 +1,3 @@
+in_memory: True
+EDSR : False
+CAE : True
