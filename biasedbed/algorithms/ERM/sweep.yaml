@@ -1,0 +1,7 @@
+# Include sweep parameters of your algorithm here
+parameters:
+  epochs:
+    values:
+      - 10
+      - 20
+      - 30

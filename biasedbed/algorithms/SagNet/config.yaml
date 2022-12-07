@@ -1,0 +1,22 @@
+# Include default parameters of your algorithm here.
+
+mixedprec: True
+learning_rate: 1e-4
+depth: 50
+dropout: 0
+style_stage: 3
+pretrained: True
+weight_decay: 1e-4
+momentum: 0.9
+scheduler: step
+iterations: 100000
+milestones:
+  - 30
+  - 60
+  - 90
+#milestones:
+#  - 50000
+#  - 70000
+gamma: 0.1
+clip_adv: 0.1 # equals None in Python!
+w_adv: 0.1
