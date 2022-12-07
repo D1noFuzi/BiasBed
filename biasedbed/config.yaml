@@ -1,0 +1,51 @@
+# Default config file for BiasedBed
+
+# Project name for wandb
+project: yourname
+
+# Root directory
+root: /path/to/your/root/
+data_dir: ${root}/biasedbed/datasets/
+
+# Distributed training
+num_workers: 8
+distributed: 0
+find_unused_parameters: False
+world_size: 1
+address: localhost
+port: '12355'
+
+# Algorithm
+algorithm:
+  name: ERM
+
+# Training
+training:
+  dataset:
+    name: ImageNet1k
+  epochs: 100
+  batch_size: 128  # Adapt according to world_size (batch_size/world_size)
+  save_model_interval: 1
+  save_dir: ${root}/savedmodels/
+
+# Validation
+validation:
+  interval: 1
+  batch_size: 256
+
+# Testing
+testing:
+  datasets:
+    - CueConflict
+    - Silhouette
+    - Sketch
+    - Edge
+    - ImageNetStylized
+    - ImageNet1k
+  interval: 1
+
+# Logging
+logging:
+  wandb_mode: online
+  wandb_dir: ${root}
+  enable_tqdm: True
