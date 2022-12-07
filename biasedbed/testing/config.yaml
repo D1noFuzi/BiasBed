@@ -1,0 +1,21 @@
+datafields:
+  - algorithm:
+      - name
+      - optimizer
+  - training:
+      - dataset:
+          - name
+
+filters:
+  last_only: False
+  best_only: False
+  best_validation: True
+  epochs_greater_equal: 70
+
+groups:
+  - algorithm:
+      - name
+      - optimizer
+  - training:
+      - dataset:
+          - name
